@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Calculator</string>
+
+    <string name="button00">÷</string>
+    <string name="button01">*</string>
+    <string name="button02">-</string>
+    <string name="button03">+</string>
+
+    <string name="button10">7</string>
+    <string name="button11">8</string>
+    <string name="button12">9</string>
+    <string name="button13">%</string>
+
+    <string name="button20">4</string>
+    <string name="button21">5</string>
+    <string name="button22">6</string>
+    <string name="button23">C</string>
+
+    <string name="button30">1</string>
+    <string name="button31">2</string>
+    <string name="button32">3</string>
+    <string name="button33">&#60;</string>
+
+    <string name="button40">±</string>
+    <string name="button41">0</string>
+    <string name="button42">,</string>
+    <string name="button43">=</string>
 </resources>
