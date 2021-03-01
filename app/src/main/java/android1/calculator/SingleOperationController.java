@@ -9,8 +9,7 @@ public class SingleOperationController implements Controller {
 
     private final MainActivity gui;
     private final Queue<Float> numbers = new LinkedList<>();
-    private final String DOT = ".";
-    private StringBuilder temp = new StringBuilder("");
+    private final StringBuilder temp = new StringBuilder();
     private String lastSymbol;
     private Operation mOperation;
 
@@ -27,13 +26,16 @@ public class SingleOperationController implements Controller {
 
     @Override
     public void dot(){
-        lastSymbol = DOT;
-        if (temp.length()==0){
-            temp.append(0 + DOT);
-            gui.appendText(0 + DOT);
-        } else {
-            temp.append(DOT);
-            gui.appendText(DOT);
+        String DOT = ".";
+        if (!temp.toString().contains(DOT)) {
+            lastSymbol = DOT;
+            if (temp.length() == 0) {
+                temp.append(0 + DOT);
+                gui.appendText(0 + DOT);
+            } else {
+                temp.append(DOT);
+                gui.appendText(DOT);
+            }
         }
     }
 
