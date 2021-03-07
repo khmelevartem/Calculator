@@ -1,6 +1,8 @@
 package android1.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     private final HashMap<View, Integer> mNumButtons = new HashMap<>();
     public enum Operation {
@@ -24,16 +26,27 @@ public class MainActivity extends AppCompatActivity {
             return symbol;
         }
     }
+    private static final String TEMPORARY = "temp";
     private TextView mText;
     private Controller mController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM); //уже стоит по умолчанию
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mController = new SingleOperationController(this);
         mText = findViewById(R.id.result);
+        try {
+            mText.setText(savedInstanceState.get(TEMPORARY).toString());
+        } catch (NullPointerException ignored){}
         setUpButtons();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(TEMPORARY, mText.getText().toString());
     }
 
     private void setUpButtons() {
@@ -81,5 +94,6 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
+
 
 }

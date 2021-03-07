@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/back"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    style="@style/Back">
 
     <TableRow
         android:layout_width="match_parent"
@@ -20,214 +19,141 @@
 
         <TextView
             android:id="@+id/result"
-            android:layout_width="72dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textAlignment="viewEnd"
-            android:textColor="#FFFFFF"
-            android:textSize="48sp"
-            tools:text="result" />
+            tools:text="result"
+            style="@style/ResultTextStyle"/>
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="?android:attr/buttonBarButtonStyle"
         android:layout_weight="1">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDiv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonDiv"
-            />
+            style="@style/SpecificButtonStyle"
+            android:text="@string/buttonDiv" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
+            style="@style/SpecificButtonStyle"
             android:text="@string/buttonMult" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMinus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonMinus" />
+            android:text="@string/buttonMinus"
+            style="@style/SpecificButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPlus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonPlus" />
+            android:text="@string/buttonPlus"
+            style="@style/SpecificButtonStyle"/>
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="?android:attr/buttonBarButtonStyle"
         android:layout_weight="1">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
             android:text="@string/button7"
-            />
+            style="@style/ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/button8" />
+            android:text="@string/button8"
+            style="@style/ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/button9" />
+            android:text="@string/button9"
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPerc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonPerc" />
+            android:text="@string/buttonPerc"
+            style="@style/SpecificButtonStyle" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="?android:attr/buttonBarButtonStyle"
         android:layout_weight="1">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
             android:text="@string/button4"
-            />
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/button5" />
+            android:text="@string/button5"
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/button6" />
+            android:text="@string/button6"
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonClean"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonC" />
+            android:text="@string/buttonC"
+            android:textColor="@color/red"
+            style="@style/SpecificButtonStyle"/>
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="?android:attr/buttonBarButtonStyle"
         android:layout_weight="1">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
             android:text="@string/button1"
-            />
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/button2" />
+            android:text="@string/button2"
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/button3" />
+            android:text="@string/button3"
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonDel" />
+            android:text="@string/buttonDel"
+            style="@style/SpecificButtonStyle"/>
     </TableRow>
 
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="?android:attr/buttonBarButtonStyle"
         android:layout_weight="1">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
             android:text="@string/buttonPM"
-            />
+            style="@style/SpecificButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/button0" />
+            android:text="@string/button0"
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonDot" />
+            android:text="@string/buttonDot"
+            style="@style/ButtonStyle"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEqual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/buttonEqual" />
+            android:text="@string/buttonEqual"
+            android:backgroundTint="@color/dark_green"
+            style="@style/SpecificButtonStyle" />
     </TableRow>
 
 </TableLayout>

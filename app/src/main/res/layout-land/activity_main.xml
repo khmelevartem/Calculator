@@ -1,6 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    style="@style/Back">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:layout_margin="@dimen/margin"
+        tools:text="result"
+        style="@style/ResultTextStyle"/>
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="match_parent">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDiv"
+                style="@style/SpecificButtonStyle"
+                android:text="@string/buttonDiv" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonMult"
+                style="@style/SpecificButtonStyle"
+                android:text="@string/buttonMult" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonMinus"
+                android:text="@string/buttonMinus"
+                style="@style/SpecificButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPlus"
+                android:text="@string/buttonPlus"
+                style="@style/SpecificButtonStyle"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button7"
+                android:text="@string/button7"
+                style="@style/ButtonStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button8"
+                android:text="@string/button8"
+                style="@style/ButtonStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button9"
+                android:text="@string/button9"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPerc"
+                android:text="@string/buttonPerc"
+                style="@style/SpecificButtonStyle" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button4"
+                android:text="@string/button4"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button5"
+                android:text="@string/button5"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button6"
+                android:text="@string/button6"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonClean"
+                android:text="@string/buttonC"
+                android:textColor="@color/red"
+                style="@style/SpecificButtonStyle"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button1"
+                android:text="@string/button1"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                android:text="@string/button2"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                android:text="@string/button3"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDel"
+                android:text="@string/buttonDel"
+                style="@style/SpecificButtonStyle"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPM"
+                android:text="@string/buttonPM"
+                style="@style/SpecificButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button0"
+                android:text="@string/button0"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDot"
+                android:text="@string/buttonDot"
+                style="@style/ButtonStyle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEqual"
+                android:text="@string/buttonEqual"
+                android:backgroundTint="@color/dark_green"
+                style="@style/SpecificButtonStyle" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
